@@ -1,0 +1,24 @@
+<html>
+<head></head>
+<body>
+<table border="1">
+    <td>Title</td>
+    <td>Club</td>
+    <td>Prix</td>
+    <td>Nbr p</td>
+    {% for club in clubs %}
+        <tr>
+            <td> {{ club.id }}       </td>
+            <td> {{ club.titre }}       </td>
+            <td> {{ club.domaine }}       </td>
+            <td> {{ club.description }}       </td>
+            <td> {{ club.adress }}       </td>
+
+            <td><a href="{{path( 'update',{'id':club.id}) }}"> Modifier</a> </td>
+            <td><a href="{{path( 'delete',{'id':club.id}) }}"> supprimer</a> </td>
+
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

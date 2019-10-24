@@ -1,0 +1,24 @@
+<html>
+<head></head>
+<body>
+<table border="1">
+    <td>Title</td>
+    <td>Club</td>
+    <td>Prix</td>
+    <td>Nbr p</td>
+    {% for i in formation %}
+        <tr>
+            <td> {{ i.Title }}       </td>
+            <td> {{ i.Club }}       </td>
+            <td> {{ i.Prix }}       </td>
+            <td> {{ i.nbrp }}       </td>
+
+            {% if (i.nbrp>0) %}
+                <td>    <a href="{{ path("club_hello",{'v':i.Club}) }}"><button> Participer </button></a></td>
+            {% endif %}
+
+        </tr>
+        {% endfor %}
+</table>
+</body>
+</html>

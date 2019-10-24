@@ -1,0 +1,30 @@
+club_homepage:
+    path:     /affiche
+    defaults: { _controller: ClubBundle:Default:index }
+
+club_hello:
+    path:     /hello/{v}
+    defaults: { _controller: ClubBundle:Default:hello }
+
+club_liste:
+    path:     /liste
+    defaults: { _controller: ClubBundle:Default:liste }
+
+club_formation:
+    path:     /formation
+    defaults: { _controller: ClubBundle:Default:formation }
+read:
+    path:     /read
+    defaults: { _controller: ClubBundle:Club:read }
+
+creat:
+    path:     /creat
+    defaults: { _controller: ClubBundle:Club:creat }
+
+update:
+    path:     /update/{id}
+    defaults: { _controller: ClubBundle:Club:update }
+
+delete:
+    path:     /delete{id}
+    defaults: { _controller: ClubBundle:Club:delete }
